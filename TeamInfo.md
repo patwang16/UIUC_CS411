@@ -12,8 +12,8 @@
 | Member1     |    pw16@illinois.edu   |
 | Member2     |     Ebaad Siddique     |
 | Member2     |  ebaadss2@illinois.edu |
-| Member3     |                        |
-| Member3     |                        |
+| Member3     |     Arman Mehdipour    |
+| Member3     |  armanmm2@illinois.edu |
 
 ## Project Information
 
