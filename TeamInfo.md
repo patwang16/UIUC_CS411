@@ -5,7 +5,7 @@
 |   Info      |        Description     |
 | ----------- | ---------------------- |
 | TeamID      |        Team-014        |
-| TeamName    |         Team14         |
+| TeamName    |       AussieDogs       |
 | Captain     |      Patrick Wang      |
 | Captain     |    pw16@illinois.edu   |
 | Member1     |     Ebaad Siddique     |
