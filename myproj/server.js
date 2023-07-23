@@ -101,7 +101,7 @@ app.post('/update', function(req, res) {
   var up_latitude = req.body.up_latitude;
   var up_longitude = req.body.up_longitude;
   
-  var sql = `UPDATE Dog a SET  a.Animal_Name = '${up_dogname}', a.Breed = '${up_breed}', a.Suburb = '${up_suburb}', a.BirthYear = '${up_birthyear}', a.Gender = '${up_gender}', a.Latitude = '${up_latitude}', a.Longitude = '${up_longitude}' WHERE a.ReferenceID = '${validreferenceid}' AND b.ReferenceID = '${validreferenceid}'`;
+  var sql = `UPDATE Dog a SET  a.Animal_Name = '${up_dogname}', a.Breed = '${up_breed}', a.Suburb = '${up_suburb}', a.BirthYear = '${up_birthyear}', a.Gender = '${up_gender}', a.Latitude = '${up_latitude}', a.Longitude = '${up_longitude}' WHERE a.ReferenceID = '${validreferenceid}'`;
 
 //console.log(sql);
   connection.query(sql, function(err, result) {
