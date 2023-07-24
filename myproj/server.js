@@ -146,7 +146,7 @@ app.post('/delete', function(req, res) {
 app.post('/adv1', function(req, res) {
   var adv1breed = req.body.adv1breed;
    
-  var sql = `Select Suburb, Count(*) as DogCount FROM Dog Where Breed LIKE '%${adv1breed}%' GROUP BY Suburb HAVING DogCount >= (SELECT AVG(towndog) FROM (SELECT Count(*) AS towndog FROM Dog WHERE Breed LIKE '%${adv1breed}%' GROUP BY Suburb) AS Inter) ORDER BY DogCount DESC LIMIT 15`;
+  var sql = `Select Suburb, Count(*) as DogCount FROM Dog Where Breed LIKE '${adv1breed}%' GROUP BY Suburb HAVING DogCount >= (SELECT AVG(towndog) FROM (SELECT Count(*) AS towndog FROM Dog WHERE Breed LIKE '${adv1breed}%' GROUP BY Suburb) AS Inter) ORDER BY DogCount DESC LIMIT 15`;
 
 //console.log(sql);
   connection.query(sql, function(err, result) {
