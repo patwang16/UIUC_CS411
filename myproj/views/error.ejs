@@ -1,3 +1,36 @@
-<h1><%= message %></h1>
-<h2><%= error.status %></h2>
-<pre><%= error.stack %></pre>
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <title>Aussie Dogs</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+ </head>
+    <style>
+    table { font-family: Arial, Helvetica, sans-serif; border-collapse: collapse; width: 100%; }
+    
+     td,  th { border: 1px solid #ddd; padding: 8px; }
+    
+     tr:nth-child(even){background-color: #f2f2f2;}
+    
+     tr:hover {background-color: #ddd;}
+    
+     th { padding-top: 12px; padding-bottom: 12px; text-align: left; background-color: #007bff; color: white;}
+
+     body { background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh8N-k8Q7eSOYGtYGSbo7f2wJxVspTPUVI_GViVawJpW7c6GZSIZU5L6QwDMbVZghr_9RTI-TcfLU9b009Gz2L5oJMGtTbv4G4f1mWSW_56j1HXRqhE1WsrIY9fT3c4h_spBIKmHfFBn7rKkIKe9pjsYYJbKq6o6xL5tZCmmj_4Fch2Lle6TA7JmSNuIw/w1600/group-portrait-adorable-puppies-min.jpg'); }
+
+    </style>
+
+ <body>
+ <div class="container mt-4">
+     <div class="card">
+       <div class="card-body">
+         <h2><%= message %></h2>
+         <form action="/home" method="POST">
+           <button type="submit" class="btn btn-primary">Home</button>
+         </form>
+   </div>
+ </div>
+ </div>
+ </body>
+</html>
