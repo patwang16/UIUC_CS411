@@ -190,6 +190,7 @@ app.post('/adv2', function(req, res) {
       res.send(err)
       return;
     }
+    console.log(result);
     res.render('adv_query2',{data:[], old_entry:[], todelete:[], adv_q1:[], adv_q2:result});
   });
 });
@@ -203,6 +204,7 @@ app.post('/rank', function(req, res) {
       res.send(err)
       return;
     }
+    console.log(result);
     res.render('rankings',{ranked:result});
   });
 });
