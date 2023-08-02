@@ -1,52 +1,33 @@
 <!DOCTYPE html>
 <html>
- <head>
-   <title>Aussie Dogs</title>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- </head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 <body>
- <div class="container mt-4">
-     <div class="card">
-       <div class="card-body">
-         <h2>Find Buildings for a Town</h2>
-         <form action="graph" method="POST">
-           <div class="form-group">
-             <label for="graph_town">Town Name</label>
-             <input type="text" class="form-control col-lg-9" id="graph_town" aria-describedby="emailHelp" placeholder="Enter Town Name" name="graph_town">
-           </div>
-           <button type="submit" class="btn btn-primary">Search</button>
-         </form>
-   </div>
- </div>
- </div>
-          <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-          <script>
-          var xValues = ['Parks','Clinics','Stores'];
-          var yValues = [<%= vis_1 %>,vis_2,vis_3];
-          var barColors = ["red", "green","blue"];
-          
-          new Chart("myChart", {
-            type: "bar",
-            data: {
-              labels: xValues,
-              datasets: [{
-                backgroundColor: barColors,
-                data: yValues
-              }]
-            },
-            options: {
-              legend: {display: false},
-              title: {
-                display: true,
-                text: 'Buildings in ${town_name}'
-              }
-            }
-          });
-          </script>
+
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+<script>
+var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+var yValues = [0, 0, 0, 0, 0];
+var barColors = ["red", "green","blue","orange","brown"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "World Wine Production 2018"
+    }
+  }
+});
+</script>
 
 </body>
 </html>
