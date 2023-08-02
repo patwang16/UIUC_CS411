@@ -47,6 +47,10 @@ app.get('/adv2', function (req, res) {
  res.render('adv_query2', { "title": 'Aussie Dogs' , data:[], old_entry:[], todelete:[], adv_q1:[], adv_q2:[]});
 });
 
+app.get('/stored', function (req, res) {
+ res.render('rankings', { ranked:[]});
+});
+
 app.get('/success', function(req, res) {
       res.send({'message': 'Action finished successfully!'});
 });
@@ -88,10 +92,6 @@ app.post('/read', function(req, res) {
       res.send(err)
       return;
     }
-
-//    for (let i = 0; i < result.length;i++){
-//	console.log(result[i]);
-//    }
     res.render('index',{data: result, old_entry:[], todelete:[], adv_q1:[], adv_q2:[]});
   });
 });
@@ -193,6 +193,20 @@ app.post('/adv2', function(req, res) {
     res.render('adv_query2',{data:[], old_entry:[], todelete:[], adv_q1:[], adv_q2:result});
   });
 });
+
+app.post('/rankings', function(req, res) {
+  var sql = `CALL Rankings()`;
+
+//console.log(sql);
+  connection.query(sql, function(err, result) {
+    if (err) {
+      res.send(err)
+      return;
+    }
+    res.render('rankings',{ranked:result});
+  });
+});
+
 
 app.listen(80, function () {
     console.log('Node app is running on port 80');
