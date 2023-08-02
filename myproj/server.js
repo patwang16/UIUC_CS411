@@ -39,6 +39,14 @@ app.get('/del', function (req, res) {
  res.render('deletion', { "title": 'Aussie Dogs' , data:[], old_entry:[], todelete:[], adv_q1:[], adv_q2:[]});
 });
 
+app.get('/adv1', function (req, res) {
+ res.render('adv_query1', { "title": 'Aussie Dogs' , data:[], old_entry:[], todelete:[], adv_q1:[], adv_q2:[]});
+});
+
+app.get('/adv2', function (req, res) {
+ res.render('adv_query2', { "title": 'Aussie Dogs' , data:[], old_entry:[], todelete:[], adv_q1:[], adv_q2:[]});
+});
+
 app.get('/success', function(req, res) {
       res.send({'message': 'Action finished successfully!'});
 });
@@ -166,7 +174,7 @@ app.post('/adv1', function(req, res) {
       res.send(err)
       return;
     }
-    res.render('index',{data:[], old_entry:[], todelete:[], adv_q1:result, adv_q2:[]});
+    res.render('adv_query1',{data:[], old_entry:[], todelete:[], adv_q1:result, adv_q2:[]});
   });
 });
 
@@ -182,7 +190,7 @@ app.post('/adv2', function(req, res) {
       res.send(err)
       return;
     }
-    res.render('index',{data:[], old_entry:[], todelete:[], adv_q1:[], adv_q2:result});
+    res.render('adv_query2',{data:[], old_entry:[], todelete:[], adv_q1:[], adv_q2:result});
   });
 });
 
