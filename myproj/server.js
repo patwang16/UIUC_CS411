@@ -74,7 +74,6 @@ app.post('/create', function(req, res) {
   var newlatitude = req.body.newlatitude;
   var newlongitude = req.body.newlongitude;
   var sql = `INSERT INTO Dog (ReferenceID, Animal_Name, Breed, Suburb, BirthYear, Gender, Latitude, Longitude) VALUES ('${newreferenceid}','${newdogname}','${newbreed}','${suburb}','${birthyear}','${gender}','${newlatitude}','${newlongitude}')`;
-  var town_special = (SELECT TownName, SUM(IF(Type LIKE 'Park%',1,0)) AS NumParks, SUM(IF(Type LIKE 'Clinic%',1,0)) AS NumClinics, SUM(IF(Type LIKE '%Store%',1,0)) AS NumStores FROM Town JOIN Building ON (Town.TownName = Building.Town) GROUP BY TownName);
 
 
 //console.log(sql);
