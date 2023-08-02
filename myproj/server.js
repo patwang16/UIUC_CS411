@@ -52,7 +52,7 @@ app.get('/stored', function (req, res) {
 });
 
 app.get('/success', function(req, res) {
-      res.send({'message': 'Action finished successfully!'});
+      res.render('success');
 });
  
 // this code is executed when a user clicks the form submit button
@@ -190,7 +190,7 @@ app.post('/adv2', function(req, res) {
       res.send(err)
       return;
     }
-    console.log(result);
+    //console.log(result);
     res.render('adv_query2',{data:[], old_entry:[], todelete:[], adv_q1:[], adv_q2:result});
   });
 });
@@ -204,7 +204,7 @@ app.post('/rank', function(req, res) {
       res.send(err)
       return;
     }
-    console.log(result[0]);
+    //console.log(result[0]);
     res.render('rankings',{ranked:result[0]});
   });
 });
