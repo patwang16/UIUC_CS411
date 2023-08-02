@@ -1,1 +1,48 @@
-
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <title>Aussie Dogs</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+ </head>
+    <style>
+    table { font-family: Arial, Helvetica, sans-serif; border-collapse: collapse; width: 100%; }
+    
+     td,  th { border: 1px solid #ddd; padding: 8px; }
+    
+     tr:nth-child(even){background-color: #f2f2f2;}
+    
+     tr:hover {background-color: #ddd;}
+    
+     th { padding-top: 12px; padding-bottom: 12px; text-align: left; background-color: #007bff; color: white;}
+    </style>
+ <body>
+<div class="container mt-4">
+     <div class="card">
+       <div class="card-body">
+         <h2>Neighborhoods in Large Towns with Certain Types of Buildings</h2>
+         <form action="adv2" method="POST">
+           <div class="form-group">
+             <label for="building1">Building Type #1</label>
+             <input type="text" class="form-control col-lg-9" id="building1" aria-describedby="emailHelp" placeholder="Enter Bulding Type (Pet Store, Clinic, Park)" name="building1">
+             <label for="building2">Building Type #2</label>
+             <input type="text" class="form-control col-lg-9" id="building2" aria-describedby="emailHelp" placeholder="Enter Different Bulding Type" name="building2">
+           </div>
+           <button type="submit" class="btn btn-primary">Search</button>
+         </form>
+            <table>
+             <tr>
+             <th> Neighborhood </th>
+             </tr>
+          <% for(let i=0; i<adv_q2.length; i++) {%>
+             <tr>
+             <td><%= adv_q2[i].Neighborhood %></td>
+             </tr>
+             <% } %>
+            </table>
+   </div>
+ </div>
+ </div>
+ </body>
+</html>
