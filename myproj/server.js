@@ -76,7 +76,7 @@ app.post('/create', function(req, res) {
 //console.log(sql);
   connection.query(sql, function(err, result) {
     if (err) {
-      res.send(err)
+      res.render('error',{message:err});
       return;
     }
     res.redirect('/success');
@@ -93,7 +93,7 @@ app.post('/read', function(req, res) {
 //console.log(sql);
   connection.query(sql, function(err, result) {
     if (err) {
-      res.send(err)
+      res.render('error',{message:err});
       return;
     }
     res.render('index',{data: result, old_entry:[], todelete:[], adv_q1:[], adv_q2:[]});
@@ -108,7 +108,7 @@ app.post('/check', function(req, res) {
 //console.log(sql);
   connection.query(sql, function(err, result) {
     if (err) {
-      res.send(err)
+      res.render('error',{message:err});
       return;
     }
     res.render('update',{data:[], old_entry:result, todelete:[], adv_q1:[], adv_q2:[]});
@@ -130,7 +130,7 @@ app.post('/update', function(req, res) {
 //console.log(sql);
   connection.query(sql, function(err, result) {
     if (err) {
-      res.send(err)
+      res.render('error',{message:err});
       return;
     }
     res.redirect('/success');
@@ -145,7 +145,7 @@ app.post('/check_del', function(req, res) {
 //console.log(sql);
   connection.query(sql, function(err, result) {
     if (err) {
-      res.send(err)
+      res.render('error',{message:err});
       return;
     }
     res.render('deletion',{data:[], old_entry:[], todelete:result, adv_q1:[], adv_q2:[]});
@@ -160,7 +160,7 @@ app.post('/delete', function(req, res) {
 //console.log(sql);
   connection.query(sql, function(err, result) {
     if (err) {
-      res.send(err)
+      res.render('error',{message:err});
       return;
     }
     res.redirect('/success');
@@ -175,7 +175,7 @@ app.post('/adv1', function(req, res) {
 //console.log(sql);
   connection.query(sql, function(err, result) {
     if (err) {
-      res.send(err)
+      res.render('error',{message:err});
       return;
     }
     res.render('adv_query1',{data:[], old_entry:[], todelete:[], adv_q1:result, adv_q2:[]});
@@ -191,7 +191,7 @@ app.post('/adv2', function(req, res) {
 //console.log(sql);
   connection.query(sql, function(err, result) {
     if (err) {
-      res.send(err)
+      res.render('error',{message:err});
       return;
     }
     //console.log(result);
@@ -205,7 +205,7 @@ app.post('/rank', function(req, res) {
 //console.log(sql);
   connection.query(sql, function(err, result) {
     if (err) {
-      res.send(err)
+      res.render('error',{message:err});
       return;
     }
     //console.log(result[0]);
