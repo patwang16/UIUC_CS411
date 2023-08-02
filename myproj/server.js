@@ -219,7 +219,7 @@ app.post('/rank', function(req, res) {
 app.post('/graph', function(req, res) {
   var town = req.body.graph_town;
   
-  var sql = `SELECT TownName, SUM(IF(Type LIKE 'Park%',1,0)) AS NumParks, SUM(IF(Type LIKE 'Clinic%',1,0)) AS NumClinics, SUM(IF(Type LIKE '%Store%',1,0)) AS NumStores FROM Town JOIN Building ON (Town.TownName = Building.Town) WHERE TownName=${town}`;
+  var sql = `SELECT TownName, SUM(IF(Type LIKE 'Park%',1,0)) AS NumParks, SUM(IF(Type LIKE 'Clinic%',1,0)) AS NumClinics, SUM(IF(Type LIKE '%Store%',1,0)) AS NumStores FROM Town JOIN Building ON (Town.TownName = Building.Town) WHERE TownName='${town}'`;
 
 //console.log(sql);
   connection.query(sql, function(err, result) {
