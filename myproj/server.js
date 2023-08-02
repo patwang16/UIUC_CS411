@@ -28,11 +28,11 @@ app.get('/', function(req, res) {
 });
 
 app.get('/home', function (req, res) {
- res.redirect('/');
+ res.render('/');
 });
 
 app.get('/register', function (req, res) {
- res.render('register');
+ res.render('index', { "title": 'Aussie Dogs' , data:[], old_entry:[], todelete:[], adv_q1:[], adv_q2:[]});
 });
 
 app.get('/up', function (req, res) {
