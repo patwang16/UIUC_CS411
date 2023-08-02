@@ -27,12 +27,12 @@ app.get('/', function(req, res) {
   res.render('index', { "title": 'Aussie Dogs' , data:[], old_entry:[], todelete:[], adv_q1:[], adv_q2:[]});
 });
 
-app.get('/home', function (req, res) {
- res.render('/');
+app.post('/home', function (req, res) {
+ res.redirect('/');
 });
 
 app.get('/register', function (req, res) {
- res.render('index', { "title": 'Aussie Dogs' , data:[], old_entry:[], todelete:[], adv_q1:[], adv_q2:[]});
+ res.render('register', { "title": 'Aussie Dogs' , data:[], old_entry:[], todelete:[], adv_q1:[], adv_q2:[]});
 });
 
 app.get('/up', function (req, res) {
