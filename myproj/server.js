@@ -204,8 +204,8 @@ app.post('/rank', function(req, res) {
       res.send(err)
       return;
     }
-    console.log(result);
-    res.render('rankings',{ranked:result});
+    console.log(result[0]);
+    res.render('rankings',{ranked:result[0]});
   });
 });
 
