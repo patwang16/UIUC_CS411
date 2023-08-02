@@ -194,7 +194,7 @@ app.post('/adv2', function(req, res) {
   });
 });
 
-app.post('/rankings', function(req, res) {
+app.post('/rank', function(req, res) {
   var sql = `CALL Rankings()`;
 
 //console.log(sql);
