@@ -1,1 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <title>Aussie Dogs</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+ </head>
 
+ <body>
+  <div class="container mt-4">
+     <div class="card">
+       <div class="card-body">
+         <h2>Update a Dog</h2>
+         <form action="check" method="POST">
+           <div class="form-group">
+             <label for="up_referenceid">Choose the dog you want to edit</label>
+             <input type="text" class="form-control col-lg-9" id="up_referenceid" aria-describedby="emailHelp" placeholder="Enter Reference ID" name="up_referenceid">
+           </div>
+           <button type="submit" class="btn btn-primary">Search</button>
+         </form>
+             <table>
+             <tr>
+             <th> ReferenceID </th>
+             <th> Dog Name </th>
+             <th> Breed </th>
+             <th> Suburb </th>
+             <th> Birth Year </th>
+             <th> Gender </th>
+             <th> Latitude </th>
+             <th> Longitude </th>
+             </tr>
+          <% for(let i=0; i<old_entry.length; i++) {%>
+             <tr>
+             <td><%= old_entry[i].ReferenceID %></td>
+             <td><%= old_entry[i].Animal_Name %></td>
+             <td> <%= old_entry[i].Breed %></td>
+             <td> <%= old_entry[i].Suburb %> </td>
+             <td> <%= old_entry[i].BirthYear %> </td>
+             <td> <%= old_entry[i].Gender %> </td>
+             <td> <%= old_entry[i].Latitude %> </td>
+             <td> <%= old_entry[i].Longitude %> </td>
+             </tr>
+             <% } %>
+            </table>
+        <form action="update" method="POST">
+           <div class="form-group">
+             <label for="validreferenceid">Reference ID</label>
+             <input type="text" class="form-control col-lg-9" id="validreferenceid" aria-describedby="emailHelp" placeholder="Enter Existing Reference ID" name="validreferenceid">
+             <label for="up_dogname">Dog Name</label>
+             <input type="text" class="form-control col-lg-9" id="up_dogname" aria-describedby="emailHelp" placeholder="Enter New Name" name="up_dogname">
+             <label for="up_breed">Dog Breed</label>
+             <input type="text" class="form-control col-lg-9" id="up_breed" aria-describedby="emailHelp" placeholder="Enter New Breed" name="up_breed">
+             <label for="up_suburb">Suburb</label>
+             <input type="text" class="form-control col-lg-9" id="up_suburb" aria-describedby="emailHelp" placeholder="Enter New Suburb" name="up_suburb">
+             <label for="up_birthyear">Birth Year</label>
+             <input type="text" class="form-control col-lg-9" id="up_birthyear" aria-describedby="emailHelp" placeholder="Enter New Birth Year" name="up_birthyear">
+             <label for="up_gender">Gender</label>
+             <input type="text" class="form-control col-lg-9" id="up_gender" aria-describedby="emailHelp" placeholder="Enter New Gender" name="up_gender">
+             <label for="up_latitude">Latitude</label>
+             <input type="text" class="form-control col-lg-9" id="up_latitude" aria-describedby="emailHelp" placeholder="Enter New Latitude" name="up_latitude">
+             <label for="up_longitude">Longitude</label>
+             <input type="text" class="form-control col-lg-9" id="up_longitude" aria-describedby="emailHelp" placeholder="Enter New Longitude" name="up_longitude">
+           </div>
+           <button type="submit" class="btn btn-primary">Submit</button>
+         </form>
+   </div>
+ </body>
+</html>
