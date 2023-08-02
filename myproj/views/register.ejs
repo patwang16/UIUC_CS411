@@ -1,1 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <title>Aussie Dogs</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+ </head>
 
+ <body>
+   <div class="container mt-4">
+     <div class="card">
+       <div class="card-body">
+         <h2>Register Your New Dog!</h2>
+         <form action="create" method="POST">
+           <div class="form-group">
+             <label for="newreferenceid">Reference ID</label>
+             <input type="text" class="form-control col-lg-9" id="newreferenceid" aria-describedby="emailHelp" placeholder="Enter Reference ID" name="newreferenceid">
+             <label for="newdogname">New Dog Name</label>
+             <input type="text" class="form-control col-lg-9" id="newdogname" aria-describedby="emailHelp" placeholder="Enter Your Dog's Name" name="newdogname">
+             <label for="newbreed">New Breed</label>
+             <input type="text" class="form-control col-lg-9" id="newbreed" aria-describedby="emailHelp" placeholder="Enter Your Dog's Breed" name="newbreed">
+             <label for="suburb">Suburb</label>
+             <input type="text" class="form-control col-lg-9" id="suburb" aria-describedby="emailHelp" placeholder="Enter New Suburb" name="suburb">
+             <label for="birthyear">Dog Birth Year</label>
+             <input type="text" class="form-control col-lg-9" id="birthyear" aria-describedby="emailHelp" placeholder="Enter Birth Year" name="birthyear">
+             <label for="gender">Dog Gender</label>
+             <input type="text" class="form-control col-lg-9" id="gender" aria-describedby="emailHelp" placeholder="Enter Your Dog's Gender" name="gender">
+             <label for="newlatitude">Latitude</label>
+             <input type="text" class="form-control col-lg-9" id="newlatitude" aria-describedby="emailHelp" placeholder="Enter Latitude" name="newlatitude">
+             <label for="newlongitude">Longitude</label>
+             <input type="text" class="form-control col-lg-9" id="newlongitude" aria-describedby="emailHelp" placeholder="Enter Longitude" name="newlongitude">
+           </div>
+           <button type="submit" class="btn btn-primary">Submit</button>
+         </form>
+   </div>
+ </div>
+ </div>
+ </body>
+</html>
