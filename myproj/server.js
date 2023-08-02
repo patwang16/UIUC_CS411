@@ -228,7 +228,7 @@ app.post('/graph', function(req, res) {
       return;
     }
     console.log(result);
-    res.render('graphs', { vis_1:result[1], vis_2:result[2], vis_3:result[3], town_name:result[0]});
+    res.render('graphs', { vis_1:result[0].NumParks, vis_2:result[0].NumClinics, vis_3:result[0].NumStores, town_name:result[0].TownName});
   });
 });
 
