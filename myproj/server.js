@@ -27,6 +27,10 @@ app.get('/', function(req, res) {
   res.render('index', { "title": 'Aussie Dogs' , data:[], old_entry:[], todelete:[], adv_q1:[], adv_q2:[]});
 });
 
+app.get('/register', function (req, res) {
+ res.render('register');
+});
+
 app.get('/success', function(req, res) {
       res.send({'message': 'Action finished successfully!'});
 });
