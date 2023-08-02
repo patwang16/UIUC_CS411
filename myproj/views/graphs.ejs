@@ -1,30 +1,33 @@
-<script
-src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<body>
+
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+<script>
+var xValues = [];
+var yValues = [];
+var barColors = ["red", "green","blue","orange","brown"];
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    title: {
+      display: true,
+      text: "World Wine Production 2018"
+    }
+  }
+});
 </script>
 
-<!DOCTYPE html>
-<html lang="en">
- <head>
-   <title>Aussie Dogs</title>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css%22%3E
- </head>
-
- <body>
-   <div class="container mt-4">
-     <div class="card">
-       <div class="card-body">
-         <h2>Town Building Visualization</h2>
-         <form action="create" method="POST">
-           <div class="form-group">
-             <label for="town">Reference ID</label>
-             <input type="text" class="form-control col-lg-9" id="town" aria-describedby="emailHelp" placeholder="Enter Town Name" name="town">
-           </div>
-           <button type="submit" class="btn btn-primary">Submit</button>
-         </form>
-   </div>
- </div>
- </div>
- </body>
+</body>
 </html>
