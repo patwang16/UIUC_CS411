@@ -227,7 +227,7 @@ app.post('/graph', function(req, res) {
       res.render('error',{message:err});
       return;
     }
-    //console.log(result[0]);
+    console.log(result);
     res.render('graphs', { vis_1:result[1], vis_2:result[2], vis_3:result[3], town_name:result[0]});
   });
 });
