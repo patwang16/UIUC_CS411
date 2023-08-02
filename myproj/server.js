@@ -27,6 +27,10 @@ app.get('/', function(req, res) {
   res.render('index', { "title": 'Aussie Dogs' , data:[], old_entry:[], todelete:[], adv_q1:[], adv_q2:[]});
 });
 
+app.get('/vis', function(req, res) {
+  res.render('graphs', { vis_1:0, vis_2:0, vis_3:0, town_name:'Town'});
+});
+
 app.post('/home', function (req, res) {
  res.redirect('/');
 });
@@ -210,6 +214,22 @@ app.post('/rank', function(req, res) {
     }
     //console.log(result[0]);
     res.render('rankings',{ranked:result[0]});
+  });
+});
+
+app.post('/graph', function(req, res) {
+  var town = req.body.graph_town;
+  
+  var sql = `SELECT TownName, SUM(IF(Type LIKE 'Park%',1,0)) AS NumParks, SUM(IF(Type LIKE 'Clinic%',1,0)) AS NumClinics, SUM(IF(Type LIKE '%Store%',1,0)) AS NumStores FROM Town JOIN Building ON (Town.TownName = Building.Town) WHERE TownName=${town} GROUP BY TownName`;
+
+//console.log(sql);
+  connection.query(sql, function(err, result) {
+    if (err) {
+      res.render('error',{message:err});
+      return;
+    }
+    //console.log(result[0]);
+    res.render('graphs', { vis_1:result[1], vis_2:result[2], vis_3:result[3], town_name:result[0]});
   });
 });
 
