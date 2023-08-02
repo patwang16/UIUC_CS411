@@ -31,6 +31,10 @@ app.get('/register', function (req, res) {
  res.render('register');
 });
 
+app.get('/up', function (req, res) {
+ res.render('update', {old_entry:[]});
+});
+
 app.get('/success', function(req, res) {
       res.send({'message': 'Action finished successfully!'});
 });
@@ -91,7 +95,7 @@ app.post('/check', function(req, res) {
       res.send(err)
       return;
     }
-    res.render('index',{data:[], old_entry:result, todelete:[], adv_q1:[], adv_q2:[]});
+    res.render('update',{data:[], old_entry:result, todelete:[], adv_q1:[], adv_q2:[]});
   });
 });
 
