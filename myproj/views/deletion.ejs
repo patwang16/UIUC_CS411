@@ -1,1 +1,67 @@
-
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+   <title>Aussie Dogs</title>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+ </head>
+    <style>
+    table { font-family: Arial, Helvetica, sans-serif; border-collapse: collapse; width: 100%; }
+    
+     td,  th { border: 1px solid #ddd; padding: 8px; }
+    
+     tr:nth-child(even){background-color: #f2f2f2;}
+    
+     tr:hover {background-color: #ddd;}
+    
+     th { padding-top: 12px; padding-bottom: 12px; text-align: left; background-color: #007bff; color: white;}
+    </style>
+ <body>
+<div class="container mt-4">
+     <div class="card">
+       <div class="card-body">
+         <h2>Delete a Dog Registration</h2>
+         <form action="check_del" method="POST">
+           <div class="form-group">
+             <label for="del_referenceid">Choose the dog you want to delete</label>
+             <input type="text" class="form-control col-lg-9" id="del_referenceid" aria-describedby="emailHelp" placeholder="Enter Reference ID" name="del_referenceid">
+           </div>
+           <button type="submit" class="btn btn-primary">Search</button>
+         </form>
+             <table>
+             <tr>
+             <th> ReferenceID </th>
+             <th> Dog Name </th>
+             <th> Breed </th>
+             <th> Suburb </th>
+             <th> Birth Year </th>
+             <th> Gender </th>
+             <th> Latitude </th>
+             <th> Longitude </th>
+             </tr>
+          <% for(let i=0; i<todelete.length; i++) {%>
+             <tr>
+             <td><%= todelete[i].ReferenceID %></td>
+             <td><%= todelete[i].Animal_Name %></td>
+             <td> <%= todelete[i].Breed %></td>
+             <td> <%= todelete[i].Suburb %> </td>
+             <td> <%= todelete[i].BirthYear %> </td>
+             <td> <%= todelete[i].Gender %> </td>
+             <td> <%= todelete[i].Latitude %> </td>
+             <td> <%= todelete[i].Longitude %> </td>
+             </tr>
+             <% } %>
+            </table>
+        <form action="delete" method="POST">
+           <div class="form-group">
+             <label for="ripreferenceid">Reference ID</label>
+             <input type="text" class="form-control col-lg-9" id="ripreferenceid" aria-describedby="emailHelp" placeholder="Enter Reference ID to Delete" name="ripreferenceid">
+           </div>
+           <button type="submit" class="btn btn-primary">Submit</button>
+         </form>
+   </div>
+ </div>
+ </div>
+ </body>
+</html>
