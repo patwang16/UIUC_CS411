@@ -35,6 +35,10 @@ app.get('/up', function (req, res) {
  res.render('update', {old_entry:[]});
 });
 
+app.get('/del', function (req, res) {
+ res.render('deletion', { "title": 'Aussie Dogs' , data:[], old_entry:[], todelete:[], adv_q1:[], adv_q2:[]});
+});
+
 app.get('/success', function(req, res) {
       res.send({'message': 'Action finished successfully!'});
 });
@@ -132,7 +136,7 @@ app.post('/check_del', function(req, res) {
       res.send(err)
       return;
     }
-    res.render('index',{data:[], old_entry:[], todelete:result, adv_q1:[], adv_q2:[]});
+    res.render('deletion',{data:[], old_entry:[], todelete:result, adv_q1:[], adv_q2:[]});
   });
 });
 
