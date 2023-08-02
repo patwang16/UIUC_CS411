@@ -227,7 +227,10 @@ app.post('/graph', function(req, res) {
       res.render('error',{message:err});
       return;
     }
-    console.log(result);
+    console.log(result[0].NumParks);
+    console.log(result[0].NumClinics);
+    console.log(result[0].NumStores);
+    console.log(result[0].TownName);
     res.render('graphs', { vis_1:result[0].NumParks, vis_2:result[0].NumClinics, vis_3:result[0].NumStores, town_name:result[0].TownName});
   });
 });
