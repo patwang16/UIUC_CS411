@@ -43,10 +43,15 @@ new Chart("myChart", {
       text: "Buildings in <%= town_name %>"
     },
      scales: {
-         yAxes: {
-             min: 50,
-             max: 100
-         }
+         yAxes: [{
+                            display: true,
+                            ticks: {
+                                beginAtZero: true,
+                                steps: 10,
+                                stepValue: 5,
+                                max: 100
+                            }
+                        }]
      }
   }
 });
