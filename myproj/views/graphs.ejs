@@ -4,10 +4,9 @@
 <body>
 
 <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-
 <script>
 var xValues = ['Parks','Clinics','Stores'];
-var yValues = [];
+var yValues = [vis_1,vis_2,vis_3];
 var barColors = ["red", "green","blue"];
 
 new Chart("myChart", {
@@ -23,7 +22,7 @@ new Chart("myChart", {
     legend: {display: false},
     title: {
       display: true,
-      text: "World Wine Production 2018"
+      text: 'Buildings in ${town_name}'
     }
   }
 });
