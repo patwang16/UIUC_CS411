@@ -18,7 +18,7 @@
 | ----------- | ------------------------------------------------------------------------ |
 |  Title      | Aussie Dogs                                                              |
 | Website     |[aussies.dog](http://aussies.dog)                                                |
-| Video Link  |           asdf                                                           |
+| Video Link  |           [Zoom Recording](https://illinois.zoom.us/rec/share/RfJiW4srTcpY0rUZohCKWZAT7-UscGnXUFbfKgWBlBPoevoPJOiTxobrThxc__IM.LnZyuIRWubtvfqTx?startTime=1691377312000)                                                           |
 
 ## Project Summary
 Aussie Dogs is a web application that allows people to determine how dog-friendly towns are. Most online providers of this information use high level, summary statistics that rank a city in abstract. In addition to taking advantage of these resources (especially official statistics), our application will offer a view closer to the neighborhood level while informally crowdsourcing ratings. Features like a dog-friendliness rating, the number and location of dog parks, or the number of dogs registered in the area will be available and may be derived from services that offer real time geolocation data.
