@@ -17,7 +17,7 @@
 |   Info      |        Description                                                       |
 | ----------- | ------------------------------------------------------------------------ |
 |  Title      | Aussie Dogs                                                              |
-| Website     |[aussies.dog](aussies.dog)                                                |
+| Website     |[aussies.dog](http://aussies.dog)                                                |
 | Video Link  |           asdf                                                           |
 
 ## Project Summary
