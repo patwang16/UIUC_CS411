@@ -17,7 +17,7 @@
 |   Info      |        Description                                                       |
 | ----------- | ------------------------------------------------------------------------ |
 |  Title      | Aussie Dogs                                                              |
-| Website     |https://github.com/cs411-alawini/fa22-cs411-Q-team075-Phantom-Troupe.git  |
+| Website     |[aussies.dog](aussies.dog)                                                |
 | Video Link  |           asdf                                                           |
 
 ## Project Summary
